@@ -1,0 +1,25 @@
+name: SongBox
+options:
+  developmentLanguage: ru
+  deploymentTarget:
+    iOS: "26.0"
+targets:
+  SongBox:
+    type: application
+    platform: iOS
+    sources:
+      - path: .
+        includes: ["*.swift", "*.xcstrings"]
+    info:
+      path: Info.plist
+      properties:
+        UILaunchScreen: {}
+        CFBundleDisplayName: Точка сбора
+        NSLocationWhenInUseUsageDescription: Показывать ваше положение и отметки на карте без интернета
+    dependencies:
+      - sdk: libsqlite3.tbd
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.survival.offline
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1"
